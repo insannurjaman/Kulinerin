@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_margin="30dp"
+    >
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:elevation="30dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgCat"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:src="@drawable/sayuran"
+            app:riv_corner_radius_top_left="13dp"
+            app:riv_corner_radius_top_right="13dp"
+            app:riv_corner_radius_bottom_left="13dp"
+            app:riv_corner_radius_bottom_right="13dp"
+            android:scaleType="fitCenter"
+            />
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:src="@drawable/black"
+            app:riv_corner_radius_top_left="13dp"
+            app:riv_corner_radius_top_right="13dp"
+            app:riv_corner_radius_bottom_left="13dp"
+            app:riv_corner_radius_bottom_right="13dp"
+            android:alpha=".65"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sayuran"
+            android:textColor="#FFFF"
+            android:textSize="15sp"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+
+
+
+
+
+</LinearLayout>

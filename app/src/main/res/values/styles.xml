@@ -1,0 +1,115 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="upup" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#FFFF</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#FFFF</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+
+
+
+
+
+
+    <style name="AppThemeTransparent" parent="Theme.MaterialComponents">
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/color_primary2
+        </item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/color_primary2</item>
+        <item name="colorPrimary">@color/color_primary2</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark2</item>
+        <item name="colorAccent">@color/color_accent</item>
+    </style>
+
+    <style name="MainTheme" parent="AppThemeTransparent">
+        <item name="actionBarStyle">@style/MyTheme.ActionBar</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="MyTheme.ActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="elevation" tools:targetApi="lollipop">0dp</item>
+        <item name="background">@color/semi_transparent</item>
+    </style>
+
+    <style name="AppTheme.ActionBar.Transparent" parent="AppTheme">
+        <item name="colorPrimary">@android:color/transparent</item>
+    </style>
+
+
+
+
+
+
+
+
+        <style name="AppBaseTheme" parent="Theme.AppCompat.Light"/>
+        <style name="AppTheme3" parent="AppBaseTheme">
+            <item name="android:windowActionBarOverlay">true</item>
+            <item name="android:actionBarStyle">@style/Widget.ActionBar</item>
+            <item name="android:actionMenuTextColor">#fff</item>
+        </style>
+
+        <style name="Widget.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+            <item name="android:background">@android:color/transparent</item>
+        </style>
+
+        <style name="Widget.ActionBar.Transparent">
+            <item name="android:background">@android:color/transparent</item>
+        </style>
+
+
+
+
+
+
+    <style name="AppTheme4" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme4.TransparentTheme">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="AppTheme4.OnlyActionBarTransparentTheme" parent="Theme.MaterialComponents.Light">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor" tools:targetApi="23">@android:color/holo_blue_light</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="AppTheme4.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme4.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+
+
+
+
+
+
+</resources>

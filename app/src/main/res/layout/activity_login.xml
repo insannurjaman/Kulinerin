@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".menu.Login">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/left_arrow"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textSize="20sp"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/colorStart"/>
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="LOGIN"
+            android:textColor="@color/colorStart" />
+    </Toolbar>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="200dp"
+            android:src="@drawable/costumer_create_account"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textSize="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorStart"/>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_viewUsername"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="-15dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="40dp"
+                android:layout_width="300dp"
+                android:layout_height="90dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardBackgroundColor="@color/colorLoginPage">
+                <!--The child view inside the cardview should have extra padding,so that negative margin will not affect the bottom padding of its child.Here normally we have 16dp bottom padding for child + margin bottom of the parent is 3dp=19dp comes.-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/profile"
+                    android:layout_marginLeft="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:alpha="0.50"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="User Name"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"/>
+                    <EditText
+                        android:id="@+id/edtUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:outlineSpotShadowColor="@color/colorMain"/>
+                </LinearLayout>
+                </LinearLayout>
+                <ImageView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:src="@color/colorMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|fill_horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:translationZ="3dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:elevation="40dp"
+                    android:layout_marginTop="30dp"/>
+
+            </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_viewEmail"
+            android:layout_marginBottom="-15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/card_viewUsername"
+            app:cardElevation="40dp"
+            android:layout_width="300dp"
+            android:layout_height="90dp"
+
+            app:cardBackgroundColor="@color/colorLoginPage">
+            <!--The child view inside the cardview should have extra padding,so that negative margin will not affect the bottom padding of its child.Here normally we have 16dp bottom padding for child + margin bottom of the parent is 3dp=19dp comes.-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_email"
+                    android:layout_marginLeft="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:alpha="0.50"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:shadowColor="@color/colorMain" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_viewPassword"
+                android:layout_marginTop="-8dp"
+                android:layout_below="@id/card_viewEmail"
+                app:cardElevation="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="300dp"
+                android:layout_height="90dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/colorLoginPage">
+                <!--The child view inside the cardview should have extra padding,so that negative margin will not affect the bottom padding of its child.Here normally we have 16dp bottom padding for child + margin bottom of the parent is 3dp=19dp comes.-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_password"
+                        android:layout_marginLeft="12dp"
+                        android:layout_gravity="center_vertical"
+                        android:alpha="0.50"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Password"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"/>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="10dp"
+                            android:outlineAmbientShadowColor="@color/colorMain"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:src="@color/colorMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|fill_horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:translationZ="3dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:elevation="40dp"
+                    android:layout_marginTop="30dp"/>
+            </android.support.v7.widget.CardView>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card_viewPassword"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/button_login"
+                android:fontFamily="sans-serif-medium"
+                android:paddingLeft="60dp"
+                android:elevation="20dp"
+                android:paddingRight="60dp"
+                android:stateListAnimator="@null"
+                android:text="Register"
+                android:textColor="#FFFF"
+                android:translationZ="10dp" />
+</RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

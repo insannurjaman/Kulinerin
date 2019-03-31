@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    >
+<!--
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/imageCategory"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/sayuran"
+            android:scaleType="fitCenter"
+            app:riv_corner_radius="30dip"
+            app:riv_border_width="2dip"
+            app:riv_border_color="#333333"
+            app:riv_mutate_background="true"
+            app:riv_tile_mode="repeat"
+            />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/blackFilter"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/black"
+            android:scaleType="fitCenter"
+            app:riv_corner_radius="30dip"
+            app:riv_border_width="2dip"
+            app:riv_border_color="#333333"
+            app:riv_mutate_background="true"
+            app:riv_tile_mode="repeat"
+            android:alpha=".65"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sayuran"
+            android:textColor="#FFFF"
+            android:textSize="55sp"
+            android:layout_gravity="center"/>
+
+
+
+    </FrameLayout>-->
+
+
+
+
+
+
+
+
+    <!--<FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="30dp">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:src="@drawable/sayuran"
+            app:riv_corner_radius_top_left="10dp"
+            app:riv_corner_radius_top_right="10dp"
+            app:riv_corner_radius_bottom_left="10dp"
+            app:riv_corner_radius_bottom_right="10dp"
+            />
+    </FrameLayout>-->
+
+
+
+
+
+
+
+</LinearLayout>

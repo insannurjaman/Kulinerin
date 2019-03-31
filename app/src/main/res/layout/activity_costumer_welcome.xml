@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:elevation="30dp">
+
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:clipToPadding="false"
+    >
+
+
+    <ImageView
+        android:id="@+id/splashscreen"
+        android:layout_width="245dp"
+        android:layout_height="300dp"
+        android:src="@drawable/costumer_welcome" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Kuliner.in"
+        android:textSize="33sp"
+        android:layout_margin="17dp"
+        android:gravity="center_horizontal"
+        android:fontFamily="sans-serif-medium"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="17dp"
+        android:text="Sebuah platform jual beli bahan makanan dengan berbagai produk"
+        android:textAlignment="center"
+        android:textSize="19sp"
+        android:fontFamily="sans-serif-medium"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_login"
+        android:elevation="30dp"
+        android:translationZ="10dp"
+        android:text="Login Now"
+        android:layout_marginTop="30dp"
+        android:paddingRight="60dp"
+        android:paddingLeft="60dp"
+        android:textColor="#FFFF"
+        android:fontFamily="sans-serif-medium"
+        android:stateListAnimator="@null"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_create_account"
+        android:elevation="30dp"
+        android:translationZ="50dp"
+        android:text="Login Now"
+        android:layout_marginTop="30dp"
+        android:paddingRight="60dp"
+        android:paddingLeft="60dp"
+        android:textColor="#B72BF6"
+        android:fontFamily="sans-serif-medium"
+        android:stateListAnimator="@null"
+        />
+
+</LinearLayout>
+
+</RelativeLayout>
+
+
+
+
