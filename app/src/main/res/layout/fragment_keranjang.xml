@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Toolbar
+        android:id="@+id/home_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Kuliner in"
+            android:textColor="#FFFFFF" />
+    </Toolbar>
+
+
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_below="@id/home_toolbar">
+
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:animateLayoutChanges="true">
+
+
+                <android.support.v7.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/keranjang_item"
+                android:layout_gravity="center_horizontal">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="149dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    >
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/ic_discount"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gunakan Discount"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="5dp"
+                        android:textSize="25sp"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/discount_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                   android:layout_gravity="bottom"
+                    android:layout_marginBottom="60dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="10dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total"
+                                android:textSize="25sp" />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="20sp"
+                                    android:text="Rp "/>
+                                <TextView
+                                    android:id="@+id/total_prize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="15.000"
+                                    android:textSize="20sp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="40dp"
+                                android:layout_marginLeft="90dp"
+                                android:background="@drawable/button_login"
+                                android:paddingLeft="60dp"
+                                android:elevation="20dp"
+                                android:paddingRight="60dp"
+                                android:stateListAnimator="@null"
+                                android:text="Chechout("
+                                android:textColor="#FFFF"
+                                android:translationZ="10dp" />
+                            <TextView
+                                android:id="@+id/jumlah_checkout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="27dp"
+                                android:layout_marginBottom="40dp"
+                                android:layout_marginLeft="230dp"
+                                android:elevation="20dp"
+                                android:stateListAnimator="@null"
+                                android:text="3"
+                                android:textSize="20sp"
+                                android:textColor="#FFFF"
+                                android:translationZ="10dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="27dp"
+                                android:layout_marginBottom="40dp"
+                                android:layout_marginLeft="241dp"
+                                android:elevation="20dp"
+                                android:stateListAnimator="@null"
+                                android:text=")"
+                                android:textSize="19sp"
+                                android:textColor="#FFFF"
+                                android:translationZ="10dp"/>
+
+                        </FrameLayout>
+
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+        </FrameLayout>
+    </FrameLayout>
+
+
+
+</RelativeLayout>

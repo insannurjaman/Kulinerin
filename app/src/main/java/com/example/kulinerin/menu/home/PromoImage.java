@@ -1,8 +1,6 @@
-package com.example.kulinerin.menu.Home;
+package com.example.kulinerin.menu.home;
 
 import android.util.Log;
-
-import com.example.kulinerin.R;
 
 import java.util.ArrayList;
 

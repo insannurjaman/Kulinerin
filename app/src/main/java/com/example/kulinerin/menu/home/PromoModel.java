@@ -1,4 +1,4 @@
-package com.example.kulinerin.menu.Home;
+package com.example.kulinerin.menu.home;
 
 import android.os.Parcel;
 import android.os.Parcelable;

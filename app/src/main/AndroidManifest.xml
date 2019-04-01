@@ -12,12 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".menu.Login"
+        <activity android:name=".menu.Register"
             android:theme="@style/AppTheme">
         </activity>
 
         <activity
-            android:name=".menu.Home.HomeActivity"
+            android:name=".menu.home.HomeActivity"
             android:label="Home"
             android:theme="@style/AppTheme4.TransparentTheme">
             <intent-filter>
@@ -26,9 +26,6 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".menu.CostumerProfile"
-            android:theme="@style/MyActionBar"></activity>
         <activity
             android:name=".CostumerWelcome"
             android:theme="@style/upup" />

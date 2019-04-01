@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#D81B21</color>
     <color name="colorMain">#AB2DF3</color>
 
     <color name="colorStart">#9732EE</color>
@@ -22,6 +22,10 @@
         <color name="color_primary_dark2">@android:color/black</color>
         <color name="color_accent">#4285F4</color>
         <color name="semi_transparent">#66000000</color>
+
+        <color name="colorPrize">#DD2222</color>
+
+
 
 
 </resources>
