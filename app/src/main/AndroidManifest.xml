@@ -11,7 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".menu.Login"></activity>
+        <activity android:name=".menu.Login"
+            android:theme="@style/upup">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>>
+
+        </activity>
         <activity
             android:name=".menu.Register"
             android:theme="@style/AppTheme"></activity>
@@ -19,11 +27,7 @@
             android:name=".menu.home.HomeActivity"
             android:label="Home"
             android:theme="@style/AppTheme4.TransparentTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".CostumerWelcome"

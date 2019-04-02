@@ -29,72 +29,76 @@
     </Toolbar>
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="610dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        android:gravity="center_horizontal"
-        >
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Keep Connected"
-            android:textSize="30dp"
             android:layout_gravity="left"
             android:paddingLeft="55dp"
-           />
+            android:text="Keep Connected"
+            android:textSize="30dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter your email address and password to get access your account"
-            android:paddingRight="55dp"
-            android:paddingLeft="55dp"
             android:layout_gravity="left"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="55dp"
+            android:paddingRight="55dp"
+            android:text="Enter your email address and password to get access your account" />
 
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="60dp"
-            >
+            android:layout_marginTop="30dp">
+
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:paddingTop="30dp">
+
                 <android.support.v7.widget.CardView
                     android:id="@+id/card_viewEmail"
-                    android:layout_marginBottom="-15dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@id/card_viewUsername"
-                    app:cardElevation="40dp"
                     android:layout_width="300dp"
                     android:layout_height="90dp"
-                    app:cardBackgroundColor="@color/colorLoginPage">
+                    android:layout_below="@id/card_viewUsername"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="-12dp"
+                    app:cardBackgroundColor="@color/colorLoginPage"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="20dp">
                     <!--The child view inside the cardview should have extra padding,so that negative margin will not affect the bottom padding of its child.Here normally we have 16dp bottom padding for child + margin bottom of the parent is 3dp=19dp comes.-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
+
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:src="@drawable/ic_email"
-                            android:layout_marginLeft="12dp"
                             android:layout_gravity="center_vertical"
-                            android:alpha="0.50"/>
+                            android:layout_marginLeft="12dp"
+                            android:alpha="0.50"
+                            android:src="@drawable/ic_email" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Email"
                                 android:layout_marginLeft="15dp"
-                                android:layout_marginTop="10dp"/>
+                                android:layout_marginTop="10dp"
+                                android:text="Email" />
+
                             <EditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -109,120 +113,125 @@
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/card_viewPassword"
-                    android:layout_marginTop="-8dp"
-                    android:layout_below="@id/card_viewEmail"
-                    app:cardElevation="40dp"
-                    android:layout_centerHorizontal="true"
                     android:layout_width="300dp"
                     android:layout_height="90dp"
+                    android:layout_below="@id/card_viewEmail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-10dp"
+                    app:cardBackgroundColor="@color/colorLoginPage"
                     app:cardCornerRadius="20dp"
-                    app:cardBackgroundColor="@color/colorLoginPage">
+                    app:cardElevation="20dp">
                     <!--The child view inside the cardview should have extra padding,so that negative margin will not affect the bottom padding of its child.Here normally we have 16dp bottom padding for child + margin bottom of the parent is 3dp=19dp comes.-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
+
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:src="@drawable/ic_password"
-                            android:layout_marginLeft="12dp"
                             android:layout_gravity="center_vertical"
-                            android:alpha="0.50"/>
+                            android:layout_marginLeft="12dp"
+                            android:alpha="0.50"
+                            android:src="@drawable/ic_password" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Password"
                                 android:layout_marginLeft="15dp"
-                                android:layout_marginTop="10dp"/>
+                                android:layout_marginTop="10dp"
+                                android:text="Password" />
+
                             <EditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="15dp"
                                 android:layout_marginRight="10dp"
                                 android:inputType="textPassword"
-                                android:outlineAmbientShadowColor="@color/colorMain"/>
+                                android:outlineAmbientShadowColor="@color/colorMain" />
                         </LinearLayout>
                     </LinearLayout>
 
-                    <ImageView
-                        xmlns:android="http://schemas.android.com/apk/res/android"
-                        android:src="@color/colorMain"
+                    <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom|fill_horizontal"
+                        android:layout_marginTop="30dp"
                         android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:translationZ="3dp"
-                        android:paddingBottom="5dp"
                         android:paddingTop="5dp"
-                        android:elevation="40dp"
-                        android:layout_marginTop="30dp"/>
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:src="@color/colorMain"
+                        android:translationZ="3dp" />
                 </android.support.v7.widget.CardView>
 
                 <LinearLayout
                     android:id="@+id/rememberMe"
-                    android:padding="20dp"
-                    android:layout_below="@id/card_viewPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_below="@id/card_viewPassword"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:src="@drawable/circle_outline"
-                        android:layout_marginLeft="30dp"/>
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/circle_outline" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="6dp"
-                        android:text="Remember Me?"
-                        />
+                        android:text="Remember Me?" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="60dp"
                         android:gravity="right"
-                        android:text="Forget Password ?"/>
+                        android:paddingLeft="60dp"
+                        android:text="Forget Password ?" />
                 </LinearLayout>
-                
+
                 <Button
                     android:id="@+id/buttonGetLogin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/rememberMe"
-                    android:background="@drawable/button_login"
                     android:layout_centerHorizontal="true"
-                    android:elevation="30dp"
-                    android:translationZ="10dp"
-                    android:text="Get Login"
-                    android:layout_marginTop="30dp"
-                    android:paddingRight="60dp"
-                    android:paddingLeft="60dp"
-                    android:textColor="#FFFF"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_login"
+                    android:elevation="20dp"
                     android:fontFamily="sans-serif-medium"
+                    android:paddingLeft="85dp"
+                    android:paddingTop="17dp"
+                    android:paddingRight="85dp"
+                    android:paddingBottom="17dp"
                     android:stateListAnimator="@null"
-                    />
+                    android:text="Get Login"
+                    android:textColor="#FFFF" />
+
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/buttonGetLogin"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
                     android:background="@drawable/button_create_account"
-                    android:elevation="30dp"
-                    android:translationZ="50dp"
-                    android:text="Create Account"
-                    android:layout_marginTop="30dp"
-                    android:paddingRight="60dp"
-                    android:paddingLeft="60dp"
-                    android:textColor="#B72BF6"
+                    android:elevation="20dp"
                     android:fontFamily="sans-serif-medium"
+                    android:paddingLeft="60dp"
+                    android:paddingTop="17dp"
+                    android:paddingRight="60dp"
+                    android:paddingBottom="17dp"
                     android:stateListAnimator="@null"
-                    />
+                    android:text="Create Account"
+                    android:textColor="#B72BF6" />
             </RelativeLayout>
         </FrameLayout>
     </LinearLayout>
