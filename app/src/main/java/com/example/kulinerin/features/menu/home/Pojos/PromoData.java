@@ -1,10 +1,10 @@
-package com.example.kulinerin.menu.home;
+package com.example.kulinerin.features.menu.home.Pojos;
 
 import android.util.Log;
 
 import java.util.ArrayList;
 
-public class PromoImage{
+public class PromoData {
 
 
 public static String[][] data = new String[][]{
@@ -25,7 +25,7 @@ public static ArrayList<PromoModel> getListData(){
             promoModel.setImage_drawable(i);
             promoModel.setIndex(i);
 
-            list.add(promoModel );
+            list.add(promoModel);
 
             Log.i("add", list.toString());
 
@@ -33,6 +33,7 @@ public static ArrayList<PromoModel> getListData(){
 
         return list;
     }
+
     }
 
 

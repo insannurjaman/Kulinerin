@@ -1,4 +1,4 @@
-package com.example.kulinerin.menu.home;
+package com.example.kulinerin.features.menu.home.Pojos;
 
 import android.os.Parcel;
 import android.os.Parcelable;

@@ -1,4 +1,4 @@
-package com.example.kulinerin.menu.keranjang;
+package com.example.kulinerin.features.menu.notification;
 
 import android.content.Context;
 import android.net.Uri;
@@ -13,12 +13,12 @@ import com.example.kulinerin.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link KeranjangFragment.OnFragmentInteractionListener} interface
+ * {@link NotificationFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link KeranjangFragment#newInstance} factory method to
+ * Use the {@link NotificationFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class KeranjangFragment extends Fragment {
+public class NotificationFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,7 +30,7 @@ public class KeranjangFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public KeranjangFragment() {
+    public NotificationFragment() {
         // Required empty public constructor
     }
 
@@ -40,11 +40,11 @@ public class KeranjangFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment KeranjangFragment.
+     * @return A new instance of fragment NotificationFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static KeranjangFragment newInstance(String param1, String param2) {
-        KeranjangFragment fragment = new KeranjangFragment();
+    public static NotificationFragment newInstance(String param1, String param2) {
+        NotificationFragment fragment = new NotificationFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -65,7 +65,7 @@ public class KeranjangFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_keranjang, container, false);
+        return inflater.inflate(R.layout.fragment_notification, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

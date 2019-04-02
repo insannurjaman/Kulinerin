@@ -1,4 +1,4 @@
-package com.example.kulinerin.menu;
+package com.example.kulinerin.features.authentication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

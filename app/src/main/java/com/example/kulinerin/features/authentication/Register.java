@@ -1,4 +1,4 @@
-package com.example.kulinerin.menu;
+package com.example.kulinerin.features.authentication;
 
 import android.app.ActionBar;
 import android.app.Activity;

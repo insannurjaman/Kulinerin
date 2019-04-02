@@ -41,4 +41,7 @@ dependencies {
     //glide to get image from internet
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    //glide get image from internet
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }

@@ -1,4 +1,4 @@
-package com.example.kulinerin.menu.home.Adapters;
+package com.example.kulinerin.features.menu.home.Adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.kulinerin.R;
-import com.example.kulinerin.menu.home.PromoModel;
+import com.example.kulinerin.features.menu.home.Pojos.PromoModel;
 
 import java.util.ArrayList;
 
@@ -24,12 +24,15 @@ public class PromoAdapter extends RecyclerView.Adapter<PromoAdapter.ViewHolder> 
 
 
     public ArrayList<PromoModel> getListPromo() {
+
         return listPromo;
     }
-    public void setListPromo(ArrayList<PromoModel> listPromo) {
+    public void setListPromo(ArrayList<PromoModel> listPromo)
+    {
         this.listPromo = listPromo;
     }
-    public PromoAdapter(Context context) {
+    public PromoAdapter(Context context)
+    {
         this.context = context;
     }
 
@@ -60,7 +63,7 @@ public class PromoAdapter extends RecyclerView.Adapter<PromoAdapter.ViewHolder> 
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            imgPhoto = (ImageView) itemView.findViewById(R.id.imgViewPromo);
+            imgPhoto = itemView.findViewById(R.id.imgViewPromo);
         }
     }
 }

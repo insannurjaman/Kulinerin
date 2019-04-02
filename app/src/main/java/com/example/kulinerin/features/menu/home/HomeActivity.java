@@ -1,4 +1,4 @@
-package com.example.kulinerin.menu.home;
+package com.example.kulinerin.features.menu.home;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -16,7 +16,11 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.example.kulinerin.R;
-import com.example.kulinerin.menu.home.Adapters.PromoAdapter;
+import com.example.kulinerin.features.menu.home.Adapters.CategoryAdapter;
+import com.example.kulinerin.features.menu.home.Adapters.PromoAdapter;
+import com.example.kulinerin.features.menu.home.Pojos.CategoryModel;
+import com.example.kulinerin.features.menu.home.Pojos.PromoData;
+import com.example.kulinerin.features.menu.home.Pojos.PromoModel;
 
 import java.util.ArrayList;
 
@@ -26,7 +30,9 @@ public class HomeActivity extends AppCompatActivity {
 
     private ArrayList<PromoModel> imagePromoArrayList;
     private RecyclerView rvPromo;
-    private PromoAdapter adapter;
+    private RecyclerView rvCategory;
+    private RecyclerView.Adapter categoryAdapter;
+    private PromoAdapter promoAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,15 +64,28 @@ public class HomeActivity extends AppCompatActivity {
         //Setting up promo image
         rvPromo = findViewById(R.id.rv_promo);
         rvPromo.setHasFixedSize(true);
-
-
-
         imagePromoArrayList = new ArrayList<>();
+
+
+
+
+
+        //Setting up category
+        ArrayList<CategoryModel> categories = initCategory();
+        this.rvCategory = findViewById(R.id.rv_category);
+        this.rvCategory.setHasFixedSize(true);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        this.rvCategory.setLayoutManager(mLayoutManager);
+        categoryAdapter = new CategoryAdapter(categories);
+
+        this.rvCategory.setAdapter(categoryAdapter);
+
+
 
 
         if (savedInstanceState == null) {
             //setActionBarTitle("Mode List");
-            imagePromoArrayList.addAll(PromoImage.getListData());
+            imagePromoArrayList.addAll(PromoData.getListData());
             showRecyclerList();
 
         }
@@ -93,5 +112,25 @@ public class HomeActivity extends AppCompatActivity {
         rvPromo.setAdapter(promoAdapter);
         rvPromo.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL,false));
         Log.d("makan", "bubur");
+    }
+
+
+
+
+
+
+
+
+    //Catgory
+    private ArrayList<CategoryModel> initCategory(){
+        ArrayList<CategoryModel> list = new ArrayList<>();
+
+        list.add(new CategoryModel("Sayuran","https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjQxK_927HhAhXb7XMBHVlMDgQQjRx6BAgBEAU&url=https%3A%2F%2Friauaktual.com%2Fnews%2Fdetail%2F57678%2Fsayursayuran-ini-sebaiknya-tidak-dimakan-mentah.html&psig=AOvVaw2aGvro4bevRfsz4yN1nSan&ust=1554305134331082"));
+        list.add(new CategoryModel("Telur","https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj-1qea3LHhAhWh7XMBHZ5gABMQjRx6BAgBEAU&url=http%3A%2F%2Fwww.tribunnews.com%2Fnasional%2F2018%2F03%2F17%2Fberita-hoax-telur-palsu-resahkan-masyarakat-4-hal-ini-harus-diperhatikan&psig=AOvVaw2wqAN_rkHV9ENDvQtuNJBR&ust=1554305179859641"));
+        list.add(new CategoryModel("Susu","https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjPupes3LHhAhWi_XMBHY-CDrMQjRx6BAgBEAU&url=http%3A%2F%2Fpedomanbengkulu.com%2F2018%2F07%2Fketahui-perbedaan-susu-formula-susu-uht-dan-susu-pasteurisasi%2F&psig=AOvVaw3BaM2C-e_moFKsf21vrUeA&ust=1554305226818983"));
+        list.add(new CategoryModel("Jagung","https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjaq8a63LHhAhXV6XMBHdx3BJ8QjRx6BAgBEAU&url=https%3A%2F%2Fwww.pioneer.com%2Fweb%2Fsite%2Findonesia%2FInilah-Kelebihan-Jagung-Tongkol&psig=AOvVaw0CPymfW55jEX8G5AoOkZSU&ust=1554305261683302"));
+        list.add(new CategoryModel("Beras", "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiL58HK3LHhAhXyQ3wKHasRCe4QjRx6BAgBEAU&url=http%3A%2F%2Fjakarta.tribunnews.com%2F2018%2F09%2F28%2Fdata-tak-akurat-impor-beras-berdampak-menurunkan-kesejahteraan-petani&psig=AOvVaw1D7dpi-iw2U7IxpAQdlVRr&ust=1554305294679813"));
+
+        return list;
     }
 }
