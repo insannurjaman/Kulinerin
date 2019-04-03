@@ -18,12 +18,17 @@
 
 
 
+
         <color name="color_primary2">#212121</color>
         <color name="color_primary_dark2">@android:color/black</color>
         <color name="color_accent">#4285F4</color>
         <color name="semi_transparent">#66000000</color>
 
         <color name="colorPrize">#DD2222</color>
+
+        //color card detail product
+        <color name="colorCardDetailProduct">#F6F2F2</color>
+    <color name="colorWhite">#FFFF</color>
 
 
 

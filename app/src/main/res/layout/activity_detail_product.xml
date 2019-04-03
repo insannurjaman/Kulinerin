@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/rootparent"
+    tools:context=".features.detailproduct.DetailProductActivity">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            >
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_img_detail_product"
+                    android:layout_width="200dp"
+                    android:layout_height="250dp"
+                    android:src="@drawable/img_gedange_gede"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    />
+
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/card_view_product"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="120dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/outlinepurple"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_white_cirlce"
+                            android:translationZ="3dp"
+                            android:scaleType="fitXY"
+                            android:elevation="20dp"
+                            />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="34dp"
+                            android:layout_gravity="center"
+                            android:elevation="40dp"
+                            android:src="@drawable/favorite" />
+                    </FrameLayout>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_view_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="15dp"
+                        app:layout_constraintTop_toBottomOf="@id/iv_img_detail_product"
+
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="10dp">
+                            <TextView
+                                android:id="@+id/tv_judul_product"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Keripik Gedang Gede"
+                                android:textSize="30dp"
+                                android:paddingRight="50dp"/>
+                            <TextView
+                                android:id="@+id/tv_detail_product"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Keripik gedange gede adalah keripik dengan banyak varian rasa"
+                                android:textSize="19dp"
+                                android:paddingRight="90dp"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rp "
+                                    android:textSize="20dp"
+                                    android:textColor="@color/colorAccent"/>
+                                <TextView
+                                    android:id="@+id/tv_detail_product_prize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="15.000"
+                                    android:textSize="20dp"
+                                    android:textColor="@color/colorAccent"
+                                    android:paddingBottom="10dp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/card_view_allstuf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/card_view_product"
+                    app:layout_constraintRight_toRightOf="parent">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="20dp"
+                        app:cardElevation="20dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="20dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:orientation="horizontal">
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                        <TextView
+                                            android:id="@+id/jumlah_stars"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="3.5"
+                                            android:textSize="20sp"/>
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginTop="5dp"
+                                            android:src="@drawable/ic_stars"/>
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="20dp"
+                                            android:text="/5"/>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                        <TextView
+                                            android:id="@+id/tv_jumlah_ulasan"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="10 "/>
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Ulasan"/>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="right"
+                                    >
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/ic_kurir"
+                                        />
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                        <TextView
+                                            android:id="@+id/jumlah_kurir"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="2"/>
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=" Kurir"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="10dp"
+                                android:layout_marginTop="5dp"
+                                android:backgroundTint="@color/colorCardDetailProduct">
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                        <LinearLayout
+                                            android:id="@+id/dilihat"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            android:gravity="center"
+                                            android:layout_alignParentStart="true"
+                                            android:paddingLeft="10dp"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_marginBottom="5dp"
+                                            >
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Dilihat"
+                                                />
+                                            <TextView
+                                                android:id="@+id/iv_jumlah_product_dilihat"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="20"/>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/transaksi"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_marginBottom="5dp"
+                                            >
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Transaksi"
+                                                />
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:id="@+id/tv_jumlah_transaksi_berhasil_persen"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:text="100" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="%(" />
+
+                                                <TextView
+                                                    android:id="@+id/tv_jumlah_transaksi_berhasil"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="20" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text=" produk)" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            android:gravity="center"
+                                            android:layout_alignParentEnd="true"
+                                            android:paddingRight="10dp"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_marginBottom="5dp"
+                                            >
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Wishlist"
+                                                />
+                                            <TextView
+                                                android:id="@+id/jumlah_wishlist"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="3"/>
+                                        </LinearLayout>
+                                </RelativeLayout>
+                            </android.support.v7.widget.CardView>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/card_view_allstuf">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="20dp"
+                        app:layout_constraintRight_toRightOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="All Reviews"
+                            android:textSize="20dp"
+                            android:paddingStart="13dp"
+                            />
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_chat"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:listitem="@layout/reviewers_item"
+                            android:layout_marginTop="15dp"/>
+                    </android.support.v7.widget.CardView>
+                </FrameLayout>
+
+
+
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                app:cardElevation="10dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp"
+
+
+                    >
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:text="Tanya"
+                        android:textSize="20dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:paddingRight="50dp"
+                        android:paddingLeft="50dp"
+                        android:textColor="@color/colorStart"
+                        android:background="@drawable/button_tanya"
+
+                        android:layout_marginRight="5dp"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_alignParentEnd="true"
+                        android:text="Beli"
+                        android:textSize="18dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="65dp"
+                        android:paddingLeft="65dp"
+                        android:background="@drawable/button_login"
+                        android:textColor="@color/colorWhite"
+
+
+
+                        />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </FrameLayout>
+        </FrameLayout>
+</RelativeLayout>
