@@ -11,26 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".features.authentication.Login"
-            android:theme="@style/upup">
-
-
-        </activity>
         <activity
-            android:name=".features.authentication.Register"
-            android:theme="@style/AppTheme"></activity>
-        <activity
-            android:name=".features.menu.home.HomeActivity"
-            android:label="Home"
-            android:theme="@style/AppTheme4.TransparentTheme">
-
+            android:name=".features.mainscreen.MainScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+        <activity
+            android:name=".features.authentication.Login" />
+        <activity
+            android:name=".features.authentication.Register"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".CostumerWelcome"
             android:theme="@style/upup" />

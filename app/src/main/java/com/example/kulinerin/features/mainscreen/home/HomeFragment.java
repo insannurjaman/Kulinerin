@@ -1,30 +1,37 @@
-package com.example.kulinerin.features.menu.home;
+package com.example.kulinerin.features.mainscreen.home;
 
 import android.app.ActionBar;
 import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
+import android.app.Fragment;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.example.kulinerin.R;
-import com.example.kulinerin.features.menu.home.Adapters.CategoryAdapter;
-import com.example.kulinerin.features.menu.home.Adapters.PromoAdapter;
-import com.example.kulinerin.features.menu.home.Pojos.CategoryModel;
-import com.example.kulinerin.features.menu.home.Pojos.PromoData;
-import com.example.kulinerin.features.menu.home.Pojos.PromoModel;
+import com.example.kulinerin.features.mainscreen.MainScreenActivity;
+import com.example.kulinerin.features.mainscreen.home.Adapters.CategoryAdapter;
+import com.example.kulinerin.features.mainscreen.home.Adapters.PromoAdapter;
+import com.example.kulinerin.features.mainscreen.home.Pojos.CategoryModel;
+import com.example.kulinerin.features.mainscreen.home.Pojos.PromoData;
+import com.example.kulinerin.features.mainscreen.home.Pojos.PromoModel;
+
+import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends Fragment {
 
     TextView tvTitle;
 
@@ -33,11 +40,19 @@ public class HomeActivity extends AppCompatActivity {
     private RecyclerView rvCategory;
     private RecyclerView.Adapter categoryAdapter;
     private PromoAdapter promoAdapter;
+    private View view;
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.fragment_home, container, false);
+        return view;
+    }
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
         /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window w = getWindow();
@@ -46,23 +61,23 @@ public class HomeActivity extends AppCompatActivity {
 
         //make translucent statusBar on kitkat devices
         if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
-            setWindowFlag(this, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, true);
+            setWindowFlag(MainScreenActivity.getInstance(), WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, true);
         }
         if (Build.VERSION.SDK_INT >= 19) {
-            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+            MainScreenActivity.getInstance().getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         }
         //make fully Android Transparent Status bar
         if (Build.VERSION.SDK_INT >= 21) {
-            setWindowFlag(this, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false);
-            getWindow().setStatusBarColor(Color.TRANSPARENT);
+            setWindowFlag(MainScreenActivity.getInstance(), WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false);
+            MainScreenActivity.getInstance().getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
 
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(android.R.color.transparent)));
-        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        MainScreenActivity.getInstance().getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(android.R.color.transparent)));
+        MainScreenActivity.getInstance().getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
 
 
         //Setting up promo image
-        rvPromo = findViewById(R.id.rv_promo);
+        rvPromo = view.findViewById(R.id.rv_promo);
         rvPromo.setHasFixedSize(true);
         imagePromoArrayList = new ArrayList<>();
 
@@ -72,9 +87,9 @@ public class HomeActivity extends AppCompatActivity {
 
         //Setting up category
         ArrayList<CategoryModel> categories = initCategory();
-        this.rvCategory = findViewById(R.id.rv_category);
+        this.rvCategory = view.findViewById(R.id.rv_category);
         this.rvCategory.setHasFixedSize(true);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(MainScreenActivity.getInstance(), LinearLayoutManager.HORIZONTAL, false);
         this.rvCategory.setLayoutManager(mLayoutManager);
         categoryAdapter = new CategoryAdapter(categories);
 
@@ -105,12 +120,12 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void showRecyclerList() {
-        PromoAdapter promoAdapter = new PromoAdapter(this);
+        PromoAdapter promoAdapter = new PromoAdapter(MainScreenActivity.getInstance());
 
         promoAdapter.setListPromo(imagePromoArrayList);
 
         rvPromo.setAdapter(promoAdapter);
-        rvPromo.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL,false));
+        rvPromo.setLayoutManager(new LinearLayoutManager(MainScreenActivity.getInstance(), LinearLayoutManager.HORIZONTAL,false));
         Log.d("makan", "bubur");
     }
 
