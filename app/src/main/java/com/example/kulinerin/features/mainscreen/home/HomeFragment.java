@@ -71,8 +71,8 @@ public class HomeFragment extends Fragment {
             MainScreenActivity.getInstance().getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
 
-        MainScreenActivity.getInstance().getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(android.R.color.transparent)));
-        MainScreenActivity.getInstance().getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+//        MainScreenActivity.getInstance().getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(android.R.color.transparent)));
+//        MainScreenActivity.getInstance().getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
 
         //Setting up category
         this.initCategory();

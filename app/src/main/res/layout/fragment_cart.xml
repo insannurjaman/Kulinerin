@@ -12,7 +12,9 @@
         android:id="@+id/home_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:paddingTop="40dp"
+        android:paddingBottom="10dp"
+        android:layout_marginBottom="10dp">
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/tvTitle"
@@ -30,7 +32,6 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
         android:layout_below="@id/home_toolbar">
 
         <FrameLayout
@@ -123,6 +124,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="60dp">
                             <Button
+                                android:id="@+id/button_checkout"
                                 android:layout_width="wrap_content"
                                 android:layout_height="40dp"
                                 android:background="@drawable/button_login"
