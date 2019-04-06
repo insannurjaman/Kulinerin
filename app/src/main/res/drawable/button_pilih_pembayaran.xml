@@ -1,0 +1,14 @@
+<ripple
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/colorButtonPilihPembayaran"
+    >
+
+    <item android:id="@+id/pilihpemabayaran">
+        <shape android:shape="rectangle">
+           <!-- <solid android:color="@color/colorButtonPilihPembayaran" />-->
+            <corners android:radius="5dp" />
+        </shape>
+    </item>
+
+    <item android:drawable="@drawable/rounded_button" />
+</ripple>

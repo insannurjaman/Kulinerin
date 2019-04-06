@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="270dp"
+        app:cardCornerRadius="25dp"
+        android:backgroundTint="#FFFF"
+        app:cardElevation="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Penjual : "
+                    android:textSize="22dp"
+                    android:textColor="@color/colorStart"
+
+                    android:layout_marginTop="13dp"/>
+                <TextView
+                    android:id="@+id/penjual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bang Gentong"
+                    android:textSize="22dp"
+                    android:layout_marginTop="13dp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:src="@color/colorMain"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:scaleType="fitXY"
+                android:paddingRight="10dp"
+                android:layout_marginTop="3dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/img_gedange_gede"
+                    />
+                <ImageView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:src="@color/colorMain"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:id="@+id/product_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Keripik Gedange Gede"
+                            android:textSize="17sp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/product_prize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 15.000"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorPrize"/>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:src="@color/colorIconBottomNavFalse"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:scaleType="fitXY"
+                android:layout_marginTop="10dp"/>
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:paddingLeft="3dp"
+               >
+               <TextView
+                   android:id="@+id/kurir"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="JNE Reguler"
+                   android:layout_alignParentStart="true"
+                   android:layout_centerInParent="true"/>
+               <android.support.design.button.MaterialButton
+                   android:id="@+id/button_ubah_kurir"
+                   android:layout_width="100dp"
+                   android:layout_height="wrap_content"
+                   style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                   android:text="Ubah Kurir"
+                   android:textSize="10dp"
+                   android:paddingRight="3dp"
+                   android:textColor="@color/colorText"
+                   android:layout_alignParentEnd="true"
+                   />
+           </RelativeLayout>
+            <ImageView
+                android:src="@color/colorMain"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:scaleType="fitXY"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="3dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sub Total"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:layout_alignParentEnd="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp "/>
+                    <TextView
+                        android:id="@+id/text_view_sub_total_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15.000"/>
+
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+</LinearLayout>

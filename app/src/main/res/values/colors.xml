@@ -29,6 +29,8 @@
         //color card detail product
         <color name="colorCardDetailProduct">#F6F2F2</color>
     <color name="colorWhite">#FFFF</color>
+    <color name="colorText">#585858</color>
+    <color name="colorButtonPilihPembayaran">#3F32EE</color>
 
 
 
