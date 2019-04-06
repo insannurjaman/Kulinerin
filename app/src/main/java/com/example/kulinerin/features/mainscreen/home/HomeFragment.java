@@ -7,39 +7,38 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.app.Fragment;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.TextView;
 
 import com.example.kulinerin.R;
 import com.example.kulinerin.features.mainscreen.MainScreenActivity;
 import com.example.kulinerin.features.mainscreen.home.Adapters.CategoryAdapter;
-import com.example.kulinerin.features.mainscreen.home.Adapters.PromoAdapter;
-import com.example.kulinerin.features.mainscreen.home.Pojos.CategoryModel;
-import com.example.kulinerin.features.mainscreen.home.Pojos.PromoData;
-import com.example.kulinerin.features.mainscreen.home.Pojos.PromoModel;
+import com.example.kulinerin.features.mainscreen.home.Adapters.ProductAdapter;
+import com.example.kulinerin.models.Category;
+import com.example.kulinerin.models.Product;
 
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
-
-    TextView tvTitle;
-
-    private ArrayList<PromoModel> imagePromoArrayList;
-    private RecyclerView rvPromo;
-    private RecyclerView rvCategory;
+    //category
+    private RecyclerView categoryRecyclerView;
     private RecyclerView.Adapter categoryAdapter;
-    private PromoAdapter promoAdapter;
+    private ArrayList<Category> categories = new ArrayList<>();
+
+    //product
+    private RecyclerView productRecyclerView;
+    private RecyclerView.Adapter productAdapter;
+    private ArrayList<Product> products = new ArrayList<>();
+
     private View view;
 
     @Nullable
@@ -75,37 +74,29 @@ public class HomeFragment extends Fragment {
         MainScreenActivity.getInstance().getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(android.R.color.transparent)));
         MainScreenActivity.getInstance().getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
 
-
-        //Setting up promo image
-       // rvPromo = view.findViewById(R.id.rv_promo);
-        rvPromo.setHasFixedSize(true);
-        imagePromoArrayList = new ArrayList<>();
-
-
-
-
-
         //Setting up category
-        ArrayList<CategoryModel> categories = initCategory();
-       // this.rvCategory = view.findViewById(R.id.rv_category);
-        this.rvCategory.setHasFixedSize(true);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(MainScreenActivity.getInstance(), LinearLayoutManager.HORIZONTAL, false);
-        this.rvCategory.setLayoutManager(mLayoutManager);
+        this.initCategory();
+        categoryRecyclerView = view.findViewById(R.id.recycler_view_category);
+        categoryRecyclerView.setLayoutManager(new GridLayoutManager(
+                MainScreenActivity.getInstance(),
+                2,
+                GridLayoutManager.HORIZONTAL,
+                false));
         categoryAdapter = new CategoryAdapter(categories);
-
-        this.rvCategory.setAdapter(categoryAdapter);
-
+        categoryRecyclerView.setAdapter(categoryAdapter);
 
 
-
-        if (savedInstanceState == null) {
-            //setActionBarTitle("Mode List");
-            imagePromoArrayList.addAll(PromoData.getListData());
-            showRecyclerList();
-
-        }
-
-
+        //Setting up product
+        this.initProduct();
+        productRecyclerView = view.findViewById(R.id.recycler_view_product);
+        productRecyclerView.setLayoutManager(new GridLayoutManager(
+                MainScreenActivity.getInstance(),
+                2,
+                GridLayoutManager.VERTICAL,
+                false));
+        productAdapter = new ProductAdapter(products);
+        productRecyclerView.setNestedScrollingEnabled(false);
+        productRecyclerView.setAdapter(productAdapter);
     }
 
     public static void setWindowFlag(Activity activity, final int bits, boolean on) {
@@ -119,33 +110,34 @@ public class HomeFragment extends Fragment {
         win.setAttributes(winParams);
     }
 
-    private void showRecyclerList() {
-        PromoAdapter promoAdapter = new PromoAdapter(MainScreenActivity.getInstance());
-
-        promoAdapter.setListPromo(imagePromoArrayList);
-
-        rvPromo.setAdapter(promoAdapter);
-        rvPromo.setLayoutManager(new LinearLayoutManager(MainScreenActivity.getInstance(), LinearLayoutManager.HORIZONTAL,false));
-        Log.d("makan", "bubur");
+    //Catgory
+    private void initCategory(){
+        categories.add(new Category("Sayuran","https://riauaktual.com/application/views/web/berita/61194223351-gallery_jvpu3mi6uk.jpg"));
+        categories.add(new Category("Telur","http://cdn2.tstatic.net/tribunnews/foto/bank/images/telur-ayam_20180317_180649.jpg"));
+        categories.add(new Category("Susu","http://pedomanbengkulu.com/wp-content/uploads/2018/07/received_1850261045032778.jpeg"));
+        categories.add(new Category("Jagung","https://www.pertanianku.com/wp-content/uploads/2017/07/Inilah-Kelebihan-Jagung-Tongkol.jpg"));
+        categories.add(new Category("Beras", "http://cdn2.tstatic.net/jakarta/foto/bank/images/beras_20180524_072617.jpg"));
+        categories.add(new Category("Beras", "http://cdn2.tstatic.net/jakarta/foto/bank/images/beras_20180524_072617.jpg"));
+        categories.add(new Category("Beras", "http://cdn2.tstatic.net/jakarta/foto/bank/images/beras_20180524_072617.jpg"));
+        categories.add(new Category("Beras", "http://cdn2.tstatic.net/jakarta/foto/bank/images/beras_20180524_072617.jpg"));
+        categories.add(new Category("Beras", "http://cdn2.tstatic.net/jakarta/foto/bank/images/beras_20180524_072617.jpg"));
+        categories.add(new Category("Beras", "http://cdn2.tstatic.net/jakarta/foto/bank/images/beras_20180524_072617.jpg"));
     }
 
-
-
-
-
-
-
-
     //Catgory
-    private ArrayList<CategoryModel> initCategory(){
-        ArrayList<CategoryModel> list = new ArrayList<>();
-
-        list.add(new CategoryModel("Sayuran","https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjQxK_927HhAhXb7XMBHVlMDgQQjRx6BAgBEAU&url=https%3A%2F%2Friauaktual.com%2Fnews%2Fdetail%2F57678%2Fsayursayuran-ini-sebaiknya-tidak-dimakan-mentah.html&psig=AOvVaw2aGvro4bevRfsz4yN1nSan&ust=1554305134331082"));
-        list.add(new CategoryModel("Telur","https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj-1qea3LHhAhWh7XMBHZ5gABMQjRx6BAgBEAU&url=http%3A%2F%2Fwww.tribunnews.com%2Fnasional%2F2018%2F03%2F17%2Fberita-hoax-telur-palsu-resahkan-masyarakat-4-hal-ini-harus-diperhatikan&psig=AOvVaw2wqAN_rkHV9ENDvQtuNJBR&ust=1554305179859641"));
-        list.add(new CategoryModel("Susu","https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjPupes3LHhAhWi_XMBHY-CDrMQjRx6BAgBEAU&url=http%3A%2F%2Fpedomanbengkulu.com%2F2018%2F07%2Fketahui-perbedaan-susu-formula-susu-uht-dan-susu-pasteurisasi%2F&psig=AOvVaw3BaM2C-e_moFKsf21vrUeA&ust=1554305226818983"));
-        list.add(new CategoryModel("Jagung","https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjaq8a63LHhAhXV6XMBHdx3BJ8QjRx6BAgBEAU&url=https%3A%2F%2Fwww.pioneer.com%2Fweb%2Fsite%2Findonesia%2FInilah-Kelebihan-Jagung-Tongkol&psig=AOvVaw0CPymfW55jEX8G5AoOkZSU&ust=1554305261683302"));
-        list.add(new CategoryModel("Beras", "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiL58HK3LHhAhXyQ3wKHasRCe4QjRx6BAgBEAU&url=http%3A%2F%2Fjakarta.tribunnews.com%2F2018%2F09%2F28%2Fdata-tak-akurat-impor-beras-berdampak-menurunkan-kesejahteraan-petani&psig=AOvVaw1D7dpi-iw2U7IxpAQdlVRr&ust=1554305294679813"));
-
-        return list;
+    private void initProduct(){
+        products.add(new Product());
+        products.add(new Product());
+        products.add(new Product());
+        products.add(new Product());
+        products.add(new Product());
+        products.add(new Product());
+        products.add(new Product());
+        products.add(new Product());
+        products.add(new Product());
+        products.add(new Product());
+        products.add(new Product());
+        products.add(new Product());
+        products.add(new Product());
     }
 }
