@@ -31,7 +31,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 
-public class HomeActivity extends Fragment {
+public class HomeFragment extends Fragment {
 
     TextView tvTitle;
 

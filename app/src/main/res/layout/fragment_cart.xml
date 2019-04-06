@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/background"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <Toolbar
@@ -40,11 +41,13 @@
             android:animateLayoutChanges="true">
 
 
-                <android.support.v7.widget.RecyclerView
-                android:layout_width="wrap_content"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/cart_recycler_view"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:listitem="@layout/keranjang_item"
-                android:layout_gravity="center_horizontal">
+                tools:listitem="@layout/cart_item"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="130dp">
 
             </android.support.v7.widget.RecyclerView>
 
@@ -147,4 +150,4 @@
 
 
 
-</RelativeLayout>
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.kulinerin.features.menu.home.Adapters;
+package com.example.kulinerin.features.mainscreen.home.Adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.kulinerin.R;
-import com.example.kulinerin.features.menu.home.Pojos.PromoModel;
+import com.example.kulinerin.features.mainscreen.home.Pojos.PromoModel;
 
 import java.util.ArrayList;
 

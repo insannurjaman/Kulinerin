@@ -1,4 +1,4 @@
-package com.example.kulinerin.features.menu.home.Pojos;
+package com.example.kulinerin.features.mainscreen.home.Pojos;
 
 public class CategoryModel  {
 
