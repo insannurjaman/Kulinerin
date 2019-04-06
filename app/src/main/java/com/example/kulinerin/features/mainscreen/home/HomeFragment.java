@@ -77,7 +77,7 @@ public class HomeFragment extends Fragment {
 
 
         //Setting up promo image
-        rvPromo = view.findViewById(R.id.rv_promo);
+       // rvPromo = view.findViewById(R.id.rv_promo);
         rvPromo.setHasFixedSize(true);
         imagePromoArrayList = new ArrayList<>();
 
@@ -87,7 +87,7 @@ public class HomeFragment extends Fragment {
 
         //Setting up category
         ArrayList<CategoryModel> categories = initCategory();
-        this.rvCategory = view.findViewById(R.id.rv_category);
+       // this.rvCategory = view.findViewById(R.id.rv_category);
         this.rvCategory.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(MainScreenActivity.getInstance(), LinearLayoutManager.HORIZONTAL, false);
         this.rvCategory.setLayoutManager(mLayoutManager);
