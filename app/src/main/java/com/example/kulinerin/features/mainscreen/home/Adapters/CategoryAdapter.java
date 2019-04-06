@@ -1,4 +1,4 @@
-package com.example.kulinerin.features.menu.home.Adapters;
+package com.example.kulinerin.features.mainscreen.home.Adapters;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.kulinerin.R;
-import com.example.kulinerin.features.menu.home.Pojos.CategoryModel;
+import com.example.kulinerin.features.mainscreen.home.Pojos.CategoryModel;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

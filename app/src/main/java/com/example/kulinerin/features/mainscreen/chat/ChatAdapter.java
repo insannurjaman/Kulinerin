@@ -1,4 +1,4 @@
-package com.example.kulinerin.features.menu.chat;
+package com.example.kulinerin.features.mainscreen.chat;
 
 public class ChatAdapter {
 }
