@@ -72,9 +72,5 @@ public class DetailTransaction extends AppCompatActivity {
         products.add(new Seller());
         products.add(new Seller());
         products.add(new Seller());
-        products.add(new Seller());
-        products.add(new Seller());
-        products.add(new Seller());
-        products.add(new Seller());
     }
 }
