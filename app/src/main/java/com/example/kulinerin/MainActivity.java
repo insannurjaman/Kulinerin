@@ -5,8 +5,6 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.kulinerin.features.mainscreen.MainScreenActivity;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 /* Create an Intent that will start the Menu-Activity. */
-                Intent loginIntent = new Intent(getApplicationContext(), MainScreenActivity.class);
+                Intent loginIntent = new Intent(getApplicationContext(), CustomerWelcome.class);
                 startActivity(loginIntent);
                 finish();
             }

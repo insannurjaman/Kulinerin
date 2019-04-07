@@ -55,6 +55,7 @@
         android:textColor="#FFFF"
         android:fontFamily="sans-serif-medium"
         android:stateListAnimator="@null"
+        android:id="@+id/button_login"
         />
     <Button
         android:layout_width="wrap_content"

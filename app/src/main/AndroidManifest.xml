@@ -11,6 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/upup">
+
+        <activity android:name=".features.transactionlist.TransactionList">
+        </activity>
+        <activity android:name=".features.detailtransaction.DetailTransaction">
+
+        </activity>
         <activity android:name=".features.mainscreen.payment.PaymentActivity"></activity>
         <activity
             android:name=".features.mainscreen.checkout.CheckoutActivity"
@@ -24,22 +30,23 @@
         <activity
             android:name=".features.mainscreen.MainScreenActivity"
             android:theme="@style/upup">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".features.authentication.Login" />
         <activity
             android:name=".features.authentication.Register"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".CostumerWelcome"
+            android:name=".CustomerWelcome"
             android:theme="@style/upup" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/upup" />
+            android:theme="@style/upup" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

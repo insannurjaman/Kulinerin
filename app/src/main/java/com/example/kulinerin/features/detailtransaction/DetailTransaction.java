@@ -1,34 +1,45 @@
-package com.example.kulinerin.features.mainscreen.payment;
+package com.example.kulinerin.features.detailtransaction;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.LinearLayout;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.kulinerin.R;
-import com.example.kulinerin.features.detailtransaction.DetailTransaction;
-import com.example.kulinerin.features.mainscreen.MainScreenActivity;
-import com.example.kulinerin.features.mainscreen.checkout.CheckoutActivity;
+import com.example.kulinerin.features.transactionlist.TransactionList;
+import com.example.kulinerin.models.Seller;
 
-public class PaymentActivity extends AppCompatActivity implements View.OnClickListener {
-    LinearLayout ovoList;
+import java.util.ArrayList;
+
+public class DetailTransaction extends AppCompatActivity {
+    public ArrayList<Seller> products = new ArrayList<>();
+    public RecyclerView productListRecyclerView;
+    public ProductListAdapter adapter;
+    public Button confirmButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_payment);
+        setContentView(R.layout.activity_detail_transaction);
 
         hideStatusBar();
 
-        ovoList = findViewById(R.id.list_ovo);
-        ovoList.setOnClickListener(this);
+        this.initProductList();
+        productListRecyclerView = findViewById(R.id.recycler_view_product_list);
+        productListRecyclerView.setLayoutManager(new LinearLayoutManager(
+                this));
+        productListRecyclerView.setHasFixedSize(true);
+        adapter = new ProductListAdapter(products);
+        productListRecyclerView.setAdapter(adapter);
+
     }
 
     public void hideStatusBar() {
@@ -56,14 +67,14 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
         win.setAttributes(winParams);
     }
 
-    @Override
-    public void onClick(View v) {
-        finish();
-        CheckoutActivity.getInstance().finish();
-        MainScreenActivity.selectedMenuId = MainScreenActivity.getId(4);
-        Toast toast = Toast.makeText(getApplicationContext(),"Transaction Success",Toast.LENGTH_SHORT);
-        toast.show();
-        Intent intent = new Intent(this, DetailTransaction.class);
-        startActivity(intent);
+    public void initProductList() {
+        products.add(new Seller());
+        products.add(new Seller());
+        products.add(new Seller());
+        products.add(new Seller());
+        products.add(new Seller());
+        products.add(new Seller());
+        products.add(new Seller());
+        products.add(new Seller());
     }
 }
